@@ -1,0 +1,88 @@
+onboarding = false
+
+[theme]
+name = "tokyo-night"
+
+[terminal]
+default_shell = "/run/current-system/sw/bin/zsh"
+shell_mode = "non_login"
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+a"
+help = "prefix+?"
+settings = "prefix+s"
+detach = "prefix+q"
+reload_config = "prefix+shift+r"
+new_tab = "prefix+t"
+previous_tab = "prefix+["
+next_tab = "prefix+]"
+previous_workspace = "prefix+up"
+next_workspace = "prefix+down"
+close_tab = "prefix+shift+x"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+split_horizontal = "prefix+minus"
+split_vertical = "prefix+v"
+workspace_picker = "prefix+w"
+close_pane = "prefix+x"
+zoom = "prefix+z"
+toggle_sidebar = "prefix+b"
+
+[ui]
+sidebar_width = 28
+sidebar_min_width = 20
+sidebar_max_width = 40
+sidebar_start_collapsed = false
+sidebar_collapsed_mode = "compact"
+mouse_capture = true
+copy_on_select = true
+confirm_close = true
+prompt_new_tab_name = false
+prompt_new_workspace_name = false
+pane_borders = true
+pane_gaps = false
+show_agent_labels_on_pane_borders = true
+hide_tab_bar_when_single_tab = true
+agent_panel_sort = "priority"
+accent = "#7aa2f7"
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", "agent", "state_text"],
+  ["workspace", "tab"],
+]
+
+[ui.sidebar.agents.rows_by_agent]
+pi = [
+  ["state_icon", "agent", "state_text"],
+  ["terminal_title_stripped"],
+  ["workspace", "tab"],
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon", "workspace"],
+  ["branch", "git_status"],
+]
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 1
+
+[ui.toast.herdr]
+position = "bottom-right"
+
+[ui.sound]
+enabled = false
+
+[session]
+resume_agents_on_restore = true
+
+[experimental]
+kitty_graphics = true
+pane_history = false
