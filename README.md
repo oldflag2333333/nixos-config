@@ -1,7 +1,6 @@
 # NixOS Flake
 
-Public snapshot of my personal NixOS configuration, published without the private
-Xray module or the original repository history. Host identity and hardware settings
+Public snapshot of my personal NixOS configuration, published without the private module or the original repository history. Host identity and hardware settings
 are machine-specific; review them before using this configuration.
 
 One flake, two independently deployed environments:
